@@ -1,0 +1,54 @@
+$date
+	Fri Sep 19 19:42:09 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module nand_tb $end
+$var wire 1 ! vout $end
+$var reg 1 " vin1 $end
+$var reg 1 # vin2 $end
+$scope module dut $end
+$var wire 1 $ gnd $end
+$var wire 1 % temp $end
+$var wire 1 & vdd $end
+$var wire 1 " vin1 $end
+$var wire 1 # vin2 $end
+$var wire 1 ! vout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1&
+z%
+0$
+0#
+0"
+1!
+$end
+#50000
+1"
+#100000
+0"
+1!
+0%
+1#
+#150000
+0!
+1"
+#200000
+1!
+z%
+0#
+#300000
+0!
+0%
+1#
+#600000
