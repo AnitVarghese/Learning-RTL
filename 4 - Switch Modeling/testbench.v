@@ -16,4 +16,5 @@ module testbench;
     end
 endmodule
 
-//tb aint diff igues
+
+//tb aint diff igues. the forever will make the vcd file huge..like 250mb or sumth
