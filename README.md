@@ -4,7 +4,7 @@ This is "100 days of RTL" from github by @ekb0412
 
 
 
-<video src="https://github.com/user-attachments/assets/feafbc8e-f729-4476-a77f-3b36b1285e41" width="400" height= "200" controls></video>
+<video src="https://github.com/user-attachments/assets/feafbc8e-f729-4476-a77f-3b36b1285e41" width="300" height= "200" controls></video>
 
 
 
