@@ -1,0 +1,93 @@
+for combinational block
+
+always @*
+	case(state)
+		IDLE: begin
+			if(act)
+				if(up_dwn_n)
+					next_state = CNTUP;
+				else
+					next_state = CNTDN;
+				else
+					next_state = IDLE;
+				end
+	
+
+		CNTUP:begin
+			if(act)
+				if(up_dwn_n)
+					if(count==(1<<COUNTER_WIDTH)-1)
+						next_state = OVFLW;
+					else
+						next_state = CNTUP;
+				else
+					if (count==4'b0000)
+						next_state = OVFLW;
+					else
+						next_state = CNTDN;
+			else										next_state = IDLE;
+		end
+
+		CNTDN: begin
+			if(act)
+				if(up_dwn_n)
+					if(count==(1<<COUNTER_WIDTH)-1)
+						next_state = OVFLW;
+					else 
+						next_state = CNTUP;
+				else 
+					if(count=='b0)
+						next_state = OVFLW;
+					else
+						next_state = SNTDN;
+			else
+				next_state = IDLE;
+		end	
+
+		OVFLW: begin
+			next_stae = OVFLW;
+		end
+		
+		default: begin
+			next_state = 'bx;
+			$display("%t: State machine not initialized\n", $time);
+		end
+
+	endcase
+			
+-----------------------------------------------------------------------------------------------------------------
+
+For Sequential block
+
+
+always @(posedge clk or negedge rst_n)
+	if(!rst_n)
+		state <= IDLE;
+	else
+		state <= next_state;
+
+always @(posedge clk or negedge rst_n)
+	if(!rst_n)
+		count <= 'b0;
+	else
+		if (state==CNTUP)
+			count <= count + 1'b1;
+ 		else if 				
+			count <= count - 1'b1;
+
+assign ovflw = (state==OVFLW) ? 1'b1 : 1'b0;   //Moore
+
+
+endmodule
+
+
+									
+source: https://youtu.be/nuuKhVsOJCE?si=wSynTj5i814pgnVG - DEREK
+https://youtu.be/cufH5IEM98g?si=dNxUJ2UKCrwbqrel  - Adam Teman
+
+
+
+
+
+
+	
