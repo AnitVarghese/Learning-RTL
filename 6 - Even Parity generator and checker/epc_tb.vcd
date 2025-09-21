@@ -1,0 +1,88 @@
+$date
+	Sun Sep 21 21:25:02 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module epc_tb $end
+$var wire 1 ! error $end
+$var reg 1 " clk $end
+$var reg 4 # data_in [3:0] $end
+$var reg 1 $ parity $end
+$scope module dut $end
+$var wire 4 % data_in [3:0] $end
+$var wire 1 $ parity $end
+$var wire 1 ! error $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+0$
+b0 #
+0"
+0!
+$end
+#5000
+1"
+#10000
+0"
+1$
+0!
+b1011 #
+b1011 %
+#15000
+1"
+#20000
+0"
+0$
+0!
+b1100 #
+b1100 %
+#25000
+1"
+#30000
+0"
+b1111 #
+b1111 %
+#35000
+1"
+#40000
+0"
+1!
+1$
+b0 #
+b0 %
+#45000
+1"
+#50000
+0"
+0$
+1!
+b1011 #
+b1011 %
+#55000
+1"
+#60000
+0"
+1$
+1!
+b1100 #
+b1100 %
+#65000
+1"
+#70000
+0"
+b1111 #
+b1111 %
+#75000
+1"
+#80000
+0"
