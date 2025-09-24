@@ -5,7 +5,7 @@ module fa_nand (
     output sum, cout
     );  
     
-    wire [8:0]w;
+    wire [6:0]w; //the intermediate signals -  w[ ]
 
     nand n0(w[0], a, b);
     nand n1(w[1], a, w[0]);
@@ -21,3 +21,4 @@ module fa_nand (
 endmodule
 
 //wow its really hard. 
+
